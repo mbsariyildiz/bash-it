@@ -17,7 +17,7 @@ RVM_THEME_PROMPT_SUFFIX=" d|"
 BOLD="\[\e[1m\]"
 
 function prompt_command() {
-  PS1="\n${bold_cyan}$(scm_prompt_char_info)$(virtualenv_prompt) ${bold_cyan}\w :${reset_color}${normal}${BOLD} "
+    PS1="${bold_cyan}$(scm_prompt_char_info)$(virtualenv_prompt) ${yellow}${CONDA_DEFAULT_ENV} ${bold_cyan}| \w \n> ${reset_color}${normal}"
 }
 
 safe_append_prompt_command prompt_command
